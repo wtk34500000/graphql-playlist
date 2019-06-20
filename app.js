@@ -6,6 +6,7 @@ const mongoose =require('mongoose')
 const app =express()
 
 //connect to mlab database
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds239967.mlab.com:39967/gql-ninja")
 mongoose.connection.once('open', ()=>{
     console.log("connected to database")
 })
